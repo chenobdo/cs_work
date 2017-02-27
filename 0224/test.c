@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 
 int x = -1;
 unsigned u = 2147483648;
