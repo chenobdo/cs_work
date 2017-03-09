@@ -21,3 +21,8 @@ pid_t Fork(void)
     return pid;
 }
 
+#include <unistd.h>
+#include <sys/types.h>
+
+pid_t getpid(void);
+pid_t getppid(void);
