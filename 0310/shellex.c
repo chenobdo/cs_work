@@ -38,7 +38,7 @@ int main()
 }
 
 /* eval-evaluate a commond line */
-vodi eval(char *cmdline)
+void eval(char *cmdline)
 {
     char *argv[MAXARGS]; /* argv for evecve() */
     int bg; /* should the job run in bg or fg? */
@@ -86,16 +86,16 @@ int parseline(const char *cmdline, char **argv)
     int bg;
 
     strcpy(buf, cmdline);
-    buf[strlen(buf) - 1] = '  ';
-    while (*buf && (*buf == '  '))
+    buf[strlen(buf) - 1] = `  `;
+    while (*buf && (*buf == `  `))
         buf++;
 
     argc = 0;
-    while ((delim = strchr(buf, '  '))) {
+    while ((delim = strchr(buf, `  `))) {
         argv[argc++] = buf;
         *delim = '\0';
         buf = delim + 1;
-        while (*buf && (*buf == '  '))
+        while (*buf && (*buf == `  `))
             buf++;
     }
     argv[argc] = NULL;
