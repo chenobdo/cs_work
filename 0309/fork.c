@@ -2,7 +2,7 @@
 
 void unix_error(char *msg)
 {
-    fprintf(stderr, "%s: %S\n", msg, strerror(errno));
+    fprintf(stderr, "%s: %s\n", msg, strerror(errno));
     exit(0);
 }
 
