@@ -27,4 +27,13 @@ int main() {
             exit(0);
         }
     }
+
+    while ((n = read(STDIN_FILENO, buf, sizeof(buf))) < 0)
+        if (errno != EINTR)
+            unix_error("read error");
+
+    printf("Parent proccessing input\n");
+    while (1)
+        ;
+    exit(0);
 }
